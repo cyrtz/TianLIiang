@@ -1,14 +1,18 @@
 <main>
   <header class="brand-name">
-    <nav>
+    <div>
       天綡
-      <a routerLInk="/home">首頁</a>
-      <a routerLInk="/product">全部商品</a>
-      <a routerLInk="/faq">常見問題</a>
-    </nav>
+      <mat-button-toggle-group name="navbar" aria-label="Navbar">
+        <mat-button-toggle value="home" routerLInk="/home">首頁</mat-button-toggle>
+        <mat-button-toggle value="product" routerLInk="/product">全部商品</mat-button-toggle>
+        <mat-button-toggle value="faq" routerLInk="/faq">常見問題</mat-button-toggle>
+      </mat-button-toggle-group>
+      
+    </div>
     <!-- <span>天綡</span>
     <span>
       <app-home></app-home>
     </span> -->
   </header>
+  <router-outlet></router-outlet>
 </main>

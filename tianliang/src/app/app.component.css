@@ -5,9 +5,19 @@
     display: block;
     color: white;
     background-color: #B87070;
-    padding: var(--content-padding);
-    box-shadow: 0px 5px 25px var(--shadow-color);
   }
   .content {
     padding: var(--content-padding);
+  }
+  mat-button-toggle-group {
+    /* display: inline-flex; */
+    border: none;
+    
+    /* justify-content: center; */
+  }
+  mat-button-toggle {
+    border: none;
+    border-left: none;
+    background-color: #B87070;
+    color: white;
   }
