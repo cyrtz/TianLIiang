@@ -8,13 +8,15 @@ import { ProductComponent } from './product/product.component';
 import { FAQComponent } from './faq/faq.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { SlideShowComponent } from './slide-show/slide-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductComponent,
-    FAQComponent
+    FAQComponent,
+    SlideShowComponent
   ],
   imports: [
     BrowserModule,
