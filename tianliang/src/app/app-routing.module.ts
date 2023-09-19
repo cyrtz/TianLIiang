@@ -6,8 +6,8 @@ import { FAQComponent } from './faq/faq.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'product', component:ProductComponent},
-  {path: 'faq', component:FAQComponent},
+  {path: 'product', component: ProductComponent},
+  {path: 'faq', component: FAQComponent},
 ];
 
 @NgModule({

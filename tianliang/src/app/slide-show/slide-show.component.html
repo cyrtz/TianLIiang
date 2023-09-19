@@ -1,1 +1,21 @@
-<p>slide-show works!</p>
+<ngu-carousel
+  [inputs]="carouselBanner"
+  [dataSource]="carouselTileItems$ | async"
+  (onMove)="onmoveFn($event)"
+  [trackBy]="trackCarousel"
+  data-myStr
+>
+  
+  <ngu-item *nguCarouselDef="let item; index as i; let ani = animate" [@slider]="ani">
+    <div class="bannerStyle" [style.background]="'url(' + item + ')'">
+      <h1>
+        <div>
+            {{ myStr[i] }}
+        </div>
+      </h1>
+    </div>
+  </ngu-item>
+  <button NguCarouselPrev class="leftRs">&lt;</button>
+
+  <button NguCarouselNext class="rightRs">&gt;</button>
+</ngu-carousel>
