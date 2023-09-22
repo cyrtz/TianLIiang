@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon'
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 import {
   NguCarousel,
   NguTileComponent,
@@ -21,6 +24,7 @@ import {
   NguItemComponent
 } from '@ngu/carousel';
 import 'hammerjs';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import 'hammerjs';
     HomeComponent,
     ProductComponent,
     FAQComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,9 @@ import 'hammerjs';
     NguCarouselDefDirective,
     NguCarouselNextDirective,
     NguCarouselPrevDirective,
-    NguItemComponent
+    NguItemComponent,
+    MatCardModule,
+    MatButtonModule
     ],
   providers: [],
   bootstrap: [AppComponent]

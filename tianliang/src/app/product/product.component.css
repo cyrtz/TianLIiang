@@ -1,0 +1,32 @@
+h1 {
+    line-height: 72px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.results {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30%;
+}
+
+.product-detail-card {
+    display: block;
+    width: 30vw;
+}
+
+@media screen and (max-width:401px) {
+    .results {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        /* position: relative; */
+    }
+    .product-detail-card {
+        width: 80vw;
+        margin: 2vh 0px;
+    }
+}

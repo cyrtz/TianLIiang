@@ -1,1 +1,19 @@
-<p>product works!</p>
+<h1>全部商品</h1>
+<!-- <mat-card class="product-card">
+    <img mat-card-image src="./assets/img/food1.jpg">
+    <mat-card-content>
+        <p>商品名稱</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>加入購物車</button>
+    </mat-card-actions>
+</mat-card> -->
+<!-- <section class="results">
+    <app-product-detail [productList] = "mainProductList">
+    </app-product-detail>
+</section> -->
+
+<section class="results">
+    <app-product-detail class="product-detail-card" *ngFor = "let product of productList" [product]="product">
+    </app-product-detail>
+</section>

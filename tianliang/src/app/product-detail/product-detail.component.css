@@ -1,0 +1,19 @@
+/* .img-background{
+    background: url('https://static.wikia.nocookie.net/peppapig/images/6/61/Peppa_Pig.png/revision/latest/thumbnail/width/360/height/450?cb=20221012192249');
+    width: 100vw;
+    height: 70vh;
+} */
+.product-card {
+    /* width: 400px; */
+    height: 400px;
+    text-align: center;
+    background-color: white;
+}
+/* .mat-button  {
+    position: relative;
+    transform: translate(-50%, -50%);
+} */
+img {
+    width: 100%;
+    height: 315px;
+}

@@ -1,1 +1,11 @@
-<p>product-detail works!</p>
+<mat-card class="product-card">
+    <img mat-card-image [src]="product.photo">
+    <mat-card-content>
+        <!-- <p>{{productList.productList.name}}</p> -->
+        <p>{{product.name}}</p>
+        <p>{{product.detail}}</p>
+    </mat-card-content>
+    <!-- <mat-card-actions> -->
+        <button mat-raised-button color="primary">加入購物車</button>
+    <!-- </mat-card-actions> -->
+</mat-card>
