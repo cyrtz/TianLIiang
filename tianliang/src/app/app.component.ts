@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'tianliang';
-
+  menuTrigger!: MatMenuTrigger
   constructor(
     public dialog: MatDialog,
-    private router: Router
+    private router: Router,
   ) { }
 
   openDialog(
@@ -34,7 +34,7 @@ export class AppComponent {
       this.router.navigate(['./product']);
     }
     else {
-      this.openProductMenu;
+      this.openProductMenu(this.menuTrigger);
     }
   }
 

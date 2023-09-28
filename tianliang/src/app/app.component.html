@@ -3,7 +3,7 @@
     <div class="btn-div">
       <a>天綡</a>
       <button mat-button routerLink="/home">首頁</button>
-      <button mat-button #menuTrigger="matMenuTrigger" (mouseover)="judgeMouseEvent('mouseover')" (click)="judgeMouseEvent('click')"
+      <button mat-button #menuTrigger="matMenuTrigger" (mouseenter)="judgeMouseEvent('mouseenter')" (click)="judgeMouseEvent('click')"
          [matMenuTriggerFor]="productMenu">全部商品</button>
       <mat-menu #productMenu="matMenu">
         <span (mouseleave)="menuTrigger.closeMenu()">
