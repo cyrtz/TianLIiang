@@ -1,23 +1,34 @@
 :host {
     --content-padding: 10px;
   }
-  header {
-    display: block;
-    color: white;
+ nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #B87070;
   }
+
   .content {
     padding: var(--content-padding);
   }
-  mat-button-toggle-group {
-    /* display: inline-flex; */
-    border: none;
-    
-    /* justify-content: center; */
+
+  .btn-div button {
+    margin-left: 8px;
+    color: white;
   }
-  mat-button-toggle {
+
+  .btn-div a {
+    margin-left: 8px;
+    color: white;
+    
+  }
+  
+  /* .mat-button-toggle {
     border: none;
     border-left: none;
     background-color: #B87070;
+    color: white;
+  } */
+  .login-div button {
     color: white;
   }

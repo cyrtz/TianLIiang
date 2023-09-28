@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tianliang';
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(
+    enterAnimationDuration: string, exitAnimationDuration: string): void {
+      this.dialog.open(LoginComponent, {
+        enterAnimationDuration,
+        exitAnimationDuration
+      });
+    }
 }

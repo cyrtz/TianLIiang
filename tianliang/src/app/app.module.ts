@@ -6,14 +6,22 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { FAQComponent } from './faq/faq.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LoginComponent } from './login/login.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon'
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import {
   NguCarousel,
@@ -24,8 +32,7 @@ import {
   NguItemComponent
 } from '@ngu/carousel';
 import 'hammerjs';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +47,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
     MatTabsModule,
@@ -52,7 +60,13 @@ import { LoginComponent } from './login/login.component';
     NguCarouselPrevDirective,
     NguItemComponent,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    MatCheckboxModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,17 @@
 <header class="brand-name">
-  <nav>
-    天綡
-    <mat-button-toggle-group name="navbar" aria-label="Navbar">
-      <mat-button-toggle routerLink="/home">首頁</mat-button-toggle>
-      <mat-button-toggle routerLink="/product">全部商品</mat-button-toggle>
-      <mat-button-toggle routerLink="/faq">常見問題</mat-button-toggle>
-    </mat-button-toggle-group>
+  <nav fxLayout="row">
+    <div class="btn-div">
+      <a>天綡</a>
+      <!-- <mat-button-toggle-group name="navbar"> -->
+      <button mat-button routerLink="/home">首頁</button>
+      <button mat-button routerLink="/product">全部商品</button>
+      <button mat-button routerLink="/faq">常見問題</button>
+      <!-- </mat-button-toggle-group> -->
+    </div>
+    <div class="login-div">
+      <button mat-button (click)="openDialog('0ms', '0ms')">會員登入</button>
+    </div>
+
   </nav>
 </header>
 <router-outlet></router-outlet>

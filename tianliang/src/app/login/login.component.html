@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div mat-dialog-content style="width: 500px flex; background: #F2E6E6;" fxLayout="column">
+    <div class="header-div">
+        <span>會員登入</span>
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+    <div class="form-div" fxLayout="column" fxLayoutGap="12px">
+        <div class="form-contain-div" fxFlex="50">
+            <mat-form-field class="input-div">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="example@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <br>
+        </div>
+        <div class="form-contain-div" fxFlex="50">
+            <mat-form-field class="input-div">
+                <mat-label>Enter your password</mat-label>
+                <input matInput placeholder="" [formControl]="password" required>
+                <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <span class="pas-remember-forgot-div">
+            <mat-checkbox value="1">記住我的密碼</mat-checkbox>
+            <a href="#">忘記密碼？</a>
+        </span>
+        <!-- <span href="#"></span> -->
+        <button mat-raised-button>登入</button>
+    </div>
+</div>
