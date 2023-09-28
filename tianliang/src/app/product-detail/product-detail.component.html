@@ -1,4 +1,4 @@
-<mat-card class="product-card">
+<mat-card class="product-card" [ngClass]="product.id % 2 == 0? 'even': 'odd'">
     <img mat-card-image [src]="product.photo">
     <mat-card-content>
         <p>{{product.name}}</p>
