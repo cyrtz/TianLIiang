@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProductList, Product } from '../product';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-product',
@@ -7,12 +7,6 @@ import { IProductList, Product } from '../product';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-
-  // mainProductList: IProductList<Product> = {
-  //   productList:[
-  //     {id: 0, name:"stirnf", detail:"hot", photo:"hfdkh.jpg"}
-  //   ]
-  // }
 
     productList: Product[] = [
       {
