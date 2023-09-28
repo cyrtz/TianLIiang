@@ -20,8 +20,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 import {
   NguCarousel,
@@ -66,7 +68,8 @@ import 'hammerjs';
     MatInputModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatMenuModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,11 +2,17 @@
   <nav fxLayout="row">
     <div class="btn-div">
       <a>天綡</a>
-      <!-- <mat-button-toggle-group name="navbar"> -->
       <button mat-button routerLink="/home">首頁</button>
-      <button mat-button routerLink="/product">全部商品</button>
+      <button mat-button #menuTrigger="matMenuTrigger" (mouseover)="judgeMouseEvent('mouseover')" (click)="judgeMouseEvent('click')"
+         [matMenuTriggerFor]="productMenu">全部商品</button>
+      <mat-menu #productMenu="matMenu">
+        <span (mouseleave)="menuTrigger.closeMenu()">
+          <button mat-menu-item>無肉不歡</button>
+          <button mat-menu-item>鮮味十足</button>
+          <button mat-menu-item>玉液瓊漿</button>
+        </span>
+      </mat-menu>
       <button mat-button routerLink="/faq">常見問題</button>
-      <!-- </mat-button-toggle-group> -->
     </div>
     <div class="login-div">
       <button mat-button (click)="openDialog('0ms', '0ms')">會員登入</button>

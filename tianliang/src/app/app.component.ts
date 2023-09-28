@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from './login/login.component';
+import { MatMenuTrigger } from '@angular/material/menu';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +12,35 @@ import { LoginComponent } from './login/login.component';
 export class AppComponent {
   title = 'tianliang';
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private router: Router
+  ) { }
 
   openDialog(
     enterAnimationDuration: string, exitAnimationDuration: string): void {
-      this.dialog.open(LoginComponent, {
-        enterAnimationDuration,
-        exitAnimationDuration
-      });
+    this.dialog.open(LoginComponent, {
+      enterAnimationDuration,
+      exitAnimationDuration
+    });
+  }
+
+  openProductComponent() {
+    this.router.navigate(['./product']);
+  }
+
+  judgeMouseEvent(event: string){
+    if (event == 'click') {
+      this.router.navigate(['./product']);
     }
+    else {
+      this.openProductMenu;
+    }
+  }
+
+  openProductMenu(menuTrigger: MatMenuTrigger) {
+    menuTrigger.openMenu();
+  }
+
+
 }
